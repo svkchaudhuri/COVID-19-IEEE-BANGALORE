@@ -1,0 +1,44 @@
+﻿<Properties StartupConfiguration="{C3C21F43-1A3A-4BC2-B38E-4CDCB319BAED}|Default">
+  <MonoDevelop.Ide.ItemProperties.IEEE__COVID19.Android PreferredExecutionTarget="Android.pixel_2_pie_9_0_-_api_28" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="IEEE_COVID19/IEEE_COVID19/API/StateAccounts.cs">
+    <Files>
+      <File FileName="IEEE_COVID19/IEEE_COVID19/ViewModels/PickerViewModel.cs" Line="67" Column="22" />
+      <File FileName="IEEE_COVID19/IEEE_COVID19/Views/PickerViewModel.xaml" Line="15" Column="21" />
+      <File FileName="IEEE_COVID19/IEEE_COVID19/Views/PickerViewModel.xaml.cs" Line="19" Column="52" />
+      <File FileName="IEEE_COVID19/IEEE_COVID19/App.xaml.cs" Line="13" Column="35" />
+      <File FileName="IEEE_COVID19/IEEE_COVID19/ViewModels/SettingsViewModel.cs" Line="10" Column="37" />
+      <File FileName="IEEE_COVID19/IEEE_COVID19/API/AccountDetails.cs" Line="1" Column="1" />
+      <File FileName="IEEE_COVID19/IEEE_COVID19/API/StateAccounts.cs" Line="1" Column="1" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="IEEE_COVID19" expanded="True">
+            <Node name="IEEE_COVID19" expanded="True">
+              <Node name="API" expanded="True">
+                <Node name="StateAccounts.cs" selected="True" />
+              </Node>
+              <Node name="Models" expanded="True" />
+              <Node name="Utilities" expanded="True" />
+              <Node name="ViewModels" expanded="True">
+                <Node name="Base" expanded="True" />
+              </Node>
+              <Node name="Views" expanded="True">
+                <Node name="DonateView.xaml" expanded="True" />
+                <Node name="PickerView.xaml" expanded="True" />
+                <Node name="SettingsView.xaml" expanded="True" />
+              </Node>
+              <Node name="App.xaml" expanded="True" />
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+</Properties>

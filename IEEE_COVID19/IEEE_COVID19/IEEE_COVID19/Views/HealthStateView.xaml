@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="IEEE_COVID19.Views.HealthStateView">
+  <ContentView.Content>
+        <Grid VerticalOptions="Center" HorizontalOptions="Center" Padding="18">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <Frame CornerRadius="5" Grid.Row="1" Margin="0,-18,0,0" >
+                <Grid HeightRequest="550" WidthRequest="330" BackgroundColor="White" Padding="5" HorizontalOptions="CenterAndExpand">
+                    <WebView Source="https://www.who.int/emergencies/diseases/novel-coronavirus-2019/advice-for-public" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand"></WebView>
+                </Grid>
+            </Frame>
+            <Button Grid.Row="0" Margin="0,0,-18,0" Command="{Binding CmdCloseDetails}" Text="X" HeightRequest="36" WidthRequest="36" CornerRadius="18" HorizontalOptions="End" BackgroundColor="Maroon" TextColor="White" BorderWidth="0" />
+        </Grid>
+
+    </ContentView.Content>
+</ContentView>

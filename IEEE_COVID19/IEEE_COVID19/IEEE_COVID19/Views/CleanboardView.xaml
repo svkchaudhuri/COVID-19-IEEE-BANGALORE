@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:base="clr-namespace:IEEE_COVID19.ViewModels.Base;assembly=IEEE_COVID19"
+             mc:Ignorable="d"             
+             x:Class="IEEE_COVID19.Views.CleanboardView"
+             base:ViewModelLocator.AutoWireViewModel="True">
+    <ContentView.Content>
+
+        <Grid VerticalOptions="Center" HorizontalOptions="Center" Padding="18">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <Frame CornerRadius="5" Grid.Row="1" Margin="0,-18,0,0" >
+                <Grid HeightRequest="350" WidthRequest="330">
+                    <Grid.RowDefinitions>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <Label Text="Today cleaning activity:" FontAttributes="Bold" FontSize="17"/>
+                    <Label Text="Breakfast handwash:" Grid.Row="1" Grid.Column="0"/>
+                    <Label Text="Lunch handwash:" Grid.Row="2" Grid.Column="0"/>
+                    <Label Text="Dinner handwash:" Grid.Row="3" Grid.Column="0"/>
+                    <Label Text="Bed time handwash:" Grid.Row="4" Grid.Column="0"/>
+                    <Switch IsToggled="{Binding IsBreakfastHandWashed}" Grid.Row="1" Grid.Column="1"/>
+                    <Switch IsToggled="{Binding IsLunchHandWashed}" Grid.Row="2" Grid.Column="1"/>
+                    <Switch IsToggled="{Binding IsDinnerHandWashed}" Grid.Row="3" Grid.Column="1"/>
+                    <Switch IsToggled="{Binding IsBedTimeHandWashed}" Grid.Row="4" Grid.Column="1"/>
+                    <StackLayout Orientation="Horizontal" Grid.Row="5" Grid.Column="0" Grid.ColumnSpan="2" HorizontalOptions="End">
+                        <Button Text="Save" Command="{Binding CmdSaveWashDetails}" HeightRequest="40"/>
+                        <Button Text="Clear" Command="{Binding CmdHideDetails}" HeightRequest="40"/>
+                    </StackLayout>
+                </Grid>
+            </Frame>
+            <Button Grid.Row="0" Margin="0,0,-18,0" Command="{Binding CmdCloseDetails}" Text="X" HeightRequest="36" WidthRequest="36" CornerRadius="18" HorizontalOptions="End" BackgroundColor="Maroon" TextColor="White" BorderWidth="0" />
+        </Grid>
+    </ContentView.Content>
+</ContentView>

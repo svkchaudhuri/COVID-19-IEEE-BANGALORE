@@ -1,0 +1,127 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:base="clr-namespace:IEEE_COVID19.ViewModels.Base;assembly=IEEE_COVID19"
+             mc:Ignorable="d"
+             Title="Work from Home Hacks"
+             x:Class="IEEE_COVID19.Views.WorkfromhomeView"
+             base:ViewModelLocator.AutoWireViewModel="True">
+
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout Padding="10">
+
+                <Label Text="In the wake of the COVID-19 pandemic and ensuing lockdown in many countries around the globe, companies have voluntarily let their employees work remotely. Just like the developers of this app who worked as a remote-team to bring you the latest in COVID-19 cases on a single platform.  However, as professionals suggest, there is a huge difference between letting an employee work from home once in a while and creating a  remote team of employees. So, here are a few professional tips to balance your daily productivity as a 'remote-worker' with the healthcare concerns during such dire times.
+"
+                FontSize="Title" HorizontalOptions="Center" />
+                <Label Text="TIP-1: Working-from-Home ≠ Remote-Work"
+                  FontSize="Title" FontAttributes="Bold" HorizontalOptions="Center" />
+                <Label Text="As the Trello team suggests, when talking about remote work, many people don't make the distinction between an employee who has an office but is allowed to work from their home for a day here or there, and a fully functional remote team. In this special scenario, the world is faced with right now, all employees working from home for a couple of months, might be termed as remote-workers, working as part of a remote team.
+"
+                 FontSize="Large" FontAttributes="None" HorizontalOptions="Center" />
+                <Image Source="TIP1" HorizontalOptions="Center" />
+                <Label Text="TIP-2: Create a Daily Routine"
+                 FontSize="Title" FontAttributes="Bold" HorizontalOptions="Center" />
+                <Label Text="Although remote working allows for flexibility, it is important to cultivate strict routines or working hours, with a touch of self-kindness. 
+"
+                 FontSize="Large" FontAttributes="None" HorizontalOptions="Center" />
+                <Label Text="1.Wake up at your usual time and go through your usual routine. "
+                 FontSize="Large" FontAttributes="None" HorizontalOptions="Center" />
+                <Label Text="2.Dress in proper attire, since the way you dress can influence your mood and attitude. Do not wear pyjamas.
+"
+                 FontSize="Large" FontAttributes="None" HorizontalOptions="Center" />
+                <Label Text="3.Set proper work hours. Try to start and end your work at routine times. Plan for personal errands after that.
+"
+                 FontSize="Large" FontAttributes="None" HorizontalOptions="Center" />
+                <Image Source="TIP2" HorizontalOptions="Center" />
+                <Label Text="TIP-3: Communicate Regularly
+"
+                   FontSize="Title" FontAttributes="Bold" HorizontalOptions="Center"/>
+                <Label Text="When you work remotely you miss out on most natural, in-person interactions. Make it a point to regularly reach out to people around you, such as your coworkers and friends.
+"
+                   FontSize="Large" FontAttributes="None" HorizontalOptions="Center"/>
+                <Label Text="1.Have a daily standup meeting with your team. This will enhance your working relationships with teammates. 
+"
+                   FontSize="Large" FontAttributes="None" HorizontalOptions="Center"/>
+                <Label Text="2.Have more social interactions. Working remotely can make you feel lonely. So, plan virtual breaks with co-workers (a meal and a coffee). Keep talking to people so you do not feel socially isolated. Squeeze some social time into your meetings.
+"
+                   FontSize="Large" FontAttributes="None" HorizontalOptions="Center"/>
+                <Label Text="3.Try to over-communicate as much as possible, since you cannot walk to a colleague and say something if some information goes missing. For example, after an urgent email is sent, also send a text message to the recipient, or leave a ping on social platforms
+"
+                   FontSize="Large" FontAttributes="None" HorizontalOptions="Center"/>
+                <Image Source="TIP3" HorizontalOptions="Center" />
+                <Label Text="TIP-4: Keep Distractions at bay
+"
+                 FontSize="Title" FontAttributes="Bold" HorizontalOptions="Center" />
+                <Label Text="This is the biggest problem you will face in working from a remote location. This is the reason cited by around 44% global companies, to not allow their employees to work remotely since apparently distractions lead to less productivity amongst these employees. To prove them wrong, you may do these tasks:
+"
+                 FontSize="Large" FontAttributes="None" HorizontalOptions="Center" />
+                <Label Text="1.Your Work-space should be separate from your Rest-space. Do not work in the bedroom or the kitchen. Have a work-desk.
+"
+                 FontSize="Large" FontAttributes="None" HorizontalOptions="Center" />
+                <Label Text="2.Stay off social media. It can be a real time-waster if you're not careful.
+"
+                 FontSize="Large" FontAttributes="None" HorizontalOptions="Center" />
+                <Label Text="3.Keep the television turned off. Listen to music if you're the type who works well with some background soundtracks.
+"
+                 FontSize="Large" FontAttributes="None" HorizontalOptions="Center" />
+                <Image Source="TIP4" HorizontalOptions="Center" />
+                <Label Text="TIP-5: Manage Time Properly"
+                   FontSize="Title" FontAttributes="Bold" HorizontalOptions="Center"/>
+
+                <Label Text="Even when you are working from home, it is essential to set a schedule for the day and keep track of daily tasks. 
+"
+                   FontSize="Large" FontAttributes="None" HorizontalOptions="Center"/>
+                <Label Text="1.Keep a daily checklist."
+                   FontSize="Large" FontAttributes="None" HorizontalOptions="Start"/>
+                <Label Text="2.Use online tools for team communication , management , video conferencing , project management etc"
+                   FontSize="Large" FontAttributes="None" HorizontalOptions="Center"/>
+                <Label Text="3.Schedule short breaks. Although taking breaks might seem counterproductive, research has shown that taking short breaks can increase productivity and creativity levels. 
+"
+                   FontSize="Large" FontAttributes="None" HorizontalOptions="Center"/>
+                <Image Source="TIP5" HorizontalOptions="Center" />
+                <Label Text="TIP-6: Create a Conducive Workspace"
+                   FontSize="Title" FontAttributes="Bold" HorizontalOptions="Center"/>
+                <Label Text="Apart from having a high-speed internet connection and a reliable router, get a comfortable chair and reserve a quiet space to be able to do focused work.
+"
+                   FontSize="Large" FontAttributes="None" HorizontalOptions="Center"/>
+                <Label Text="1.Have a home office, preferably with a door that closes. Make sure it is well lit and ventilated. Place ergonomic chairs, extended monitor screens, a full suite of stationery, and a printer, if possible.
+"
+                   FontSize="Large" FontAttributes="None" HorizontalOptions="Center"/>
+                <Label Text="2.Use a comfortable headset or earpiece for calls."
+                   FontSize="Large" FontAttributes="None" HorizontalOptions="Center"/>
+                <Image Source="TIP6" HorizontalOptions="Center" />
+                <Label Text="TIP-7: A rare chance for working parents"
+                   FontSize="Title" FontAttributes="Bold" HorizontalOptions="Center"/>
+                <Label Text="Remote work may come as a blessing to parents because it provides flexibility with their work and the chance to spend more time with their kids. Being able to wake up and spend time eating breakfast with family is a rare perk for parents seeking the elusive work-life balance. 
+"
+                   FontSize="Large" FontAttributes="None" HorizontalOptions="Center"/>
+                <Label Text="1.Make children a part of your daily plan. Due to school closure, children may also be around at home. Plan and schedule some activities to occupy them while you work.
+"
+                   FontSize="Large" FontAttributes="None" HorizontalOptions="Center"/>
+                <Label Text="2.Have separate lunchtimes to spend with children. For instance, one partner can have a lunch break at 11 am-12 pm and the other breaks at 12 pm-1 pm, so 2 hours are spent with children."
+                   FontSize="Large" FontAttributes="None" HorizontalOptions="Center"/>
+                <Label Text="3.Get some family support during the work hours, if possible."
+                   FontSize="Large" FontAttributes="None" HorizontalOptions="Center"/>
+                <Image Source="TIP7" HorizontalOptions="Center" />
+                <Label Text="TIP-8: Happy Remote-Worker = Productive Remote-Worker
+"
+                   FontSize="Title" FontAttributes="None" HorizontalOptions="Center"/>
+                <Label Text="Remote work is great for work-life balance. It increases ownership and performance. It trains people to be focused and disciplined. At the same time, some of its challenges include feelings of loneliness, isolation, and disconnection. 
+"
+                   FontSize="Large" FontAttributes="None" HorizontalOptions="Center"/>
+                <Label Text="      Remote work is great for work-life balance. It increases ownership and performance. It trains people to be focused and disciplined. At the same time, some of its challenges include feelings of loneliness, isolation, and disconnection. 
+"
+                   FontSize="Large" FontAttributes="None" HorizontalOptions="Center"/>
+                <Image Source="TIP8" HorizontalOptions="Center" />
+
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>
+
+
+
+

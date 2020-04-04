@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:base="clr-namespace:IEEE_COVID19.ViewModels.Base;assembly=IEEE_COVID19"
+             xmlns:fontawesome="clr-namespace:FontAwesome;assembly=IEEE_COVID19" xmlns:views="clr-namespace:IEEE_COVID19.Views"
+             mc:Ignorable="d"
+             x:Class="IEEE_COVID19.Views.NewsView"
+             Title="News"
+             base:ViewModelLocator.AutoWireViewModel="True">
+    <ContentPage.Content>
+        <StackLayout>
+            <StackLayout Padding="20" Spacing="5">
+
+                <Button Text="WHO Website" Command="{Binding WhoNewsCmd}"/>                <Button Text="WHO Twitter Page" Command="{Binding TwitterfeedCmd}"/>                <Button Text="Ministry of Health Site" Command="{Binding MohNewsCmd}"/>                <Button Text="Ministry of Health Twitter Page" Command="{Binding TwittermohCmd}"/>                <Button Text="Diet and Nutrition" Command="{Binding DietCmd}"/>                <Button Text="Technical guidance: Points of entry and mass gatherings" Command="{Binding IndiaGovCmd}"/>                <Button Text="Reducing animal-human transmission of emerging pathogens" Command="{Binding AnimalCmd}"/>
+
+
+                <Button  WidthRequest="35" HeightRequest="35" BackgroundColor="Transparent" BorderWidth="0" >
+                    <Button.Style>
+                        <Style TargetType="Button">
+                            <Setter Property="TextColor" Value="Gray"/>
+                            <Setter Property="FontFamily" Value="{StaticResource FontAwesomeSolid}"/>
+                            <Setter Property="Text" Value="{x:Static fontawesome:FontAwesomeIcons.Twitter}"></Setter>
+                        </Style>
+                    </Button.Style>
+                </Button>
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

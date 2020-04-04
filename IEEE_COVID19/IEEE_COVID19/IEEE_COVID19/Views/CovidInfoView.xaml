@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:base="clr-namespace:IEEE_COVID19.ViewModels.Base;assembly=IEEE_COVID19"
+             mc:Ignorable="d"
+             x:Class="IEEE_COVID19.Views.CovidInfoView"
+             base:ViewModelLocator.AutoWireViewModel="True">
+    <ContentPage.Content>
+        <ScrollView>
+        <StackLayout Padding="20,20,0,0">
+            <Label Text="Image Packs" FontSize="Title" FontAttributes="Bold"/>
+            <Label Text="Flaticon" FontSize="Large"/>
+            <Label Text="Icons" FontSize="Title" FontAttributes="Bold"/>
+            <Label Text="FontAwesome" FontSize="Large"/>
+            <Label Text="Idea" FontSize="Title" FontAttributes="Bold"/>
+            <Label Text="Shouvick Chaudhuri" FontSize="Large"/>
+            <Label Text="UI Design" FontSize="Title" FontAttributes="Bold"/>
+            <Label Text="Aritra Mukherjee" FontSize="Large"/>
+            <Label Text="Developers" FontSize="Title" FontAttributes="Bold"/>
+            <Label Text="Bidhan Karan" FontSize="Large"/>
+            <Label Text="Rajarshi Bhattacharjee" FontSize="Large"/>
+            <Label Text="Soumalya Kundu" FontSize="Large"/>
+
+        </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

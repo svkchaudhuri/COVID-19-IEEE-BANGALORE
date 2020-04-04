@@ -1,0 +1,10 @@
+{
+  "version": "0.2.1",
+  "tasks": [
+    {
+      "taskLabel": "task-IEEE_COVID19",
+      "appliesTo": "IEEE_COVID19/IEEE_COVID19/",
+      "type": "launch"
+    }
+  ]
+}

@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:base="clr-namespace:IEEE_COVID19.ViewModels.Base;assembly=IEEE_COVID19"
+             mc:Ignorable="d"
+             Title="Settings"
+             x:Class="IEEE_COVID19.Views.SettingsView"
+             base:ViewModelLocator.AutoWireViewModel="True">
+    <ContentPage.Content>
+        <Grid Margin="5">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <Label VerticalOptions="Center" Text="First contact*:" Grid.Row="0" Grid.Column="0"/>
+            <Label VerticalOptions="Center" Text="Second contact:" Grid.Row="1" Grid.Column="0"/>
+            <Label VerticalOptions="Center" Text="Breakfast time:" Grid.Row="2" Grid.Column="0"/>
+            <Label VerticalOptions="Center" Text="Launch time:" Grid.Row="3" Grid.Column="0"/>
+            <Label VerticalOptions="Center" Text="Dinner time:" Grid.Row="4" Grid.Column="0"/>
+            <Label VerticalOptions="Center" Text="Bed time:" Grid.Row="5" Grid.Column="0"/>
+            <Label VerticalOptions="Center" Text="Bed time:" Grid.Row="5" Grid.Column="0"/>
+            <Entry Margin="5,0,5,0" Text="{Binding Contact1}" Keyboard="Numeric" MaxLength="10" Grid.Row="0" Grid.Column="1"/>
+            <Entry Margin="5,0,5,0" Text="{Binding Contact2}" Keyboard="Numeric" MaxLength="10" Grid.Row="1" Grid.Column="1"/>
+            <TimePicker Margin="5,0,5,0" Grid.Row="2" Grid.Column="1" Time="{Binding BreakFast}"/>
+            <TimePicker Margin="5,0,5,0" Grid.Row="3" Grid.Column="1" Time="{Binding LunchTime}"/>
+            <TimePicker Margin="5,0,5,0" Grid.Row="4" Grid.Column="1" Time="{Binding DinnerTime}"/>
+            <TimePicker Margin="5,0,5,0" Grid.Row="5" Grid.Column="1" Time="{Binding SleepTime}"/>
+            <Button Text="Save" Grid.Row="6" Grid.Column="1" VerticalOptions="EndAndExpand" HorizontalOptions="EndAndExpand" Margin="0,0,5,5" Command="{Binding SaveSettingsCommand}"></Button>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

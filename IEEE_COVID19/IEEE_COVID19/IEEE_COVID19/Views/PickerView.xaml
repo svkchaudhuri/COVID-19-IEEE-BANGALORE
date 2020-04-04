@@ -1,0 +1,65 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:base="clr-namespace:IEEE_COVID19.ViewModels.Base;assembly=IEEE_COVID19"
+             mc:Ignorable="d"
+             Title="State Select"
+             x:Class="IEEE_COVID19.Views.PickerView"
+             base:ViewModelLocator.AutoWireViewModel="True">
+    <ContentPage.Content>
+       <StackLayout Margin="20,35,20,20">
+
+			<Label Text="Donate To State" 
+
+                   FontAttributes="Bold" 
+
+                   HorizontalOptions="Center" />
+
+			<Picker Title="Select a state" 
+
+                    TitleColor="Red"
+
+                    ItemsSource="{Binding StateAccountDetails}" 
+
+                    ItemDisplayBinding="{Binding StateName}"
+
+                    SelectedItem="{Binding SelectedStateAccount}" />
+
+            <Grid Grid.Row="2" VerticalOptions="StartAndExpand" Margin="5">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="2*"/>
+                    
+                </Grid.ColumnDefinitions>
+
+
+
+                <Label Text="StateName:" Grid.Row="0" Grid.Column="0" FontSize="Medium"/>
+                <Label Text="{Binding SelectedStateAccount.StateName}" FontSize="Medium" Grid.Row="0" Grid.Column="1"  />
+
+                <Label Text="Account Holder Name:" Grid.Row="1" Grid.Column="0" FontSize="Medium"/>
+                <Label Text="{Binding SelectedStateAccount.AccountHolderName}" Grid.Row="1" Grid.Column="1" FontSize="Medium"/>
+
+                <Label Text="Account Number:" Grid.Row="2" Grid.Column="0" FontSize="Medium"/>
+                <Label Text="{Binding SelectedStateAccount.AccountNumber}" Grid.Row="2" Grid.Column="1" FontSize="Medium" />
+
+                <Label Text="IFSCCode:" Grid.Row="3" Grid.Column="0" FontSize="Medium"/>
+                <Label Text="{Binding SelectedStateAccount.IFSCCode}" Grid.Row="3" Grid.Column="1" FontSize="Medium"/>
+
+                <Label Text="BranchName:" Grid.Row="4" Grid.Column="0" FontSize="Medium"/>
+                <Label Text="{Binding SelectedStateAccount.BranchName}" Grid.Row="4" Grid.Column="1" FontSize="Medium"/>
+            </Grid>
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

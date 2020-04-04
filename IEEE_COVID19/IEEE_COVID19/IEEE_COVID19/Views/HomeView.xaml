@@ -1,0 +1,266 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<TabbedPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:base="clr-namespace:IEEE_COVID19.ViewModels.Base;assembly=IEEE_COVID19"
+             xmlns:fontawesome="clr-namespace:FontAwesome;assembly=IEEE_COVID19" xmlns:views="clr-namespace:IEEE_COVID19.Views"
+            xmlns:converters="clr-namespace:IEEE_COVID19.Converters"
+            mc:Ignorable="d"
+             x:Class="IEEE_COVID19.Views.HomeView"
+             Title="Home"
+             base:ViewModelLocator.AutoWireViewModel="True" >
+
+    <ContentPage Title="Score">
+        <ContentPage.Resources>
+            <converters:SlopToArrowConverter x:Key="SlopToArrowConverter"/>
+            <converters:ScoreToImageConverter x:Key="ScoreToImageConverter"/>
+        </ContentPage.Resources>
+        <AbsoluteLayout Padding="0" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" BackgroundColor="White">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="2"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="2"/>
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="Auto"/>
+                    </Grid.ColumnDefinitions>
+                    <StackLayout VerticalOptions="CenterAndExpand" Margin="5">
+                        <Label Text="Your cleanliness score is:" LineBreakMode="WordWrap"/>
+                        <Label FontAttributes="Bold">
+                            <Label.FormattedText>
+                                <FormattedString>
+                                    <Span Text="{Binding Percentage}"/>
+                                    <Span Text="/100"/>
+                                </FormattedString>
+                            </Label.FormattedText>
+                        </Label>
+                        <Button Text="Add cleanliness" Command="{Binding CmdShowWashDetails}" Margin="5,15,5,5" HeightRequest="40" WidthRequest="80"/>
+                    </StackLayout>
+                    <Image Margin="5" HeightRequest="150" WidthRequest="150" Grid.Column="1" Source="{Binding Percentage, Converter={StaticResource ScoreToImageConverter}}"/>
+                </Grid>
+                <BoxView Grid.Row="1" HorizontalOptions="FillAndExpand" BackgroundColor="Gray" HeightRequest="2"></BoxView>
+                <Grid Grid.Row="2" VerticalOptions="StartAndExpand" Margin="5">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="5*"/>
+                        <ColumnDefinition Width="Auto"/>
+                        <ColumnDefinition Width="3*"/>
+                        <ColumnDefinition Width="6*"/>
+                    </Grid.ColumnDefinitions>
+                    <Label Text="World" TextColor="Black" VerticalTextAlignment="Center" Margin="5,0,5,0" HeightRequest="40" FontAttributes="Bold" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" Grid.Row="0" Grid.Column="1"/>
+                    <Label Text="India" TextColor="Black" VerticalTextAlignment="Center"  Margin="5,0,5,0" HeightRequest="40" FontAttributes="Bold" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" Grid.Row="0" Grid.Column="2"/>
+                    <Grid  Grid.Row="0" Grid.Column="3">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="Auto"/>
+                        </Grid.ColumnDefinitions>
+                        <Label Text="{Binding SelectedStateCases.State}" TextColor="Black" FontAttributes="Bold" HorizontalOptions="EndAndExpand" VerticalOptions="CenterAndExpand" LineBreakMode="TailTruncation"/>
+                        <Grid Grid.Column="1">
+                            <Picker x:Name="StatePicker" HorizontalOptions="Center" VerticalOptions="Center" ItemsSource="{Binding LstStateCases}" SelectedItem="{Binding SelectedStateCases}" WidthRequest="1" HeightRequest="1" ItemDisplayBinding="{Binding State}" />
+                            <Button  WidthRequest="35" HeightRequest="35" BackgroundColor="Transparent" BorderWidth="0" Clicked="Button_Clicked">
+                                <Button.Style>
+                                    <Style TargetType="Button">
+                                        <Setter Property="TextColor" Value="Gray"/>
+                                        <Setter Property="FontFamily" Value="{StaticResource FontAwesomeSolid}"/>
+                                        <Setter Property="Text" Value="{x:Static fontawesome:FontAwesomeIcons.AngleDown}"></Setter>
+                                    </Style>
+                                </Button.Style>
+                            </Button>
+                        </Grid>
+                    </Grid>
+
+                    <Label WidthRequest="100" HeightRequest="30" VerticalTextAlignment="Center" HorizontalTextAlignment="Center" Text="Cases" TextColor="White" BackgroundColor="#2196F3" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" Grid.Row="1" Grid.Column="0"/>
+                    <Label WidthRequest="100" HeightRequest="30" VerticalTextAlignment="Center" HorizontalTextAlignment="Center"  Text="Active" TextColor="White" BackgroundColor="Orange" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" Grid.Row="2" Grid.Column="0"/>
+                    <Label WidthRequest="100" HeightRequest="30" VerticalTextAlignment="Center" HorizontalTextAlignment="Center"  Text="Recovered" TextColor="White" BackgroundColor="LimeGreen" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" Grid.Row="3" Grid.Column="0"/>
+                    <Label WidthRequest="100" HeightRequest="30" VerticalTextAlignment="Center" HorizontalTextAlignment="Center"  Text="Deceased" TextColor="White" BackgroundColor="Coral" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" Grid.Row="4" Grid.Column="0"/>
+
+                    <Label Text="{Binding WorldCase.TotalCases}" TextColor="Black" BackgroundColor="White" HorizontalOptions="Center" VerticalOptions="Center" Grid.Row="1" Grid.Column="1"/>
+                    <Label Text="{Binding WorldCase.ActiveCases}" TextColor="Black" BackgroundColor="White" HorizontalOptions="Center" VerticalOptions="Center" Grid.Row="2" Grid.Column="1"/>
+                    <Label Text="{Binding WorldCase.RecoveredCases}" TextColor="Black" BackgroundColor="White" HorizontalOptions="Center" VerticalOptions="Center" Grid.Row="3" Grid.Column="1"/>
+                    <Label Text="{Binding WorldCase.Death}" TextColor="Black" BackgroundColor="White" HorizontalOptions="Center" VerticalOptions="Center" Grid.Row="4" Grid.Column="1"/>
+
+                    <Label Text="{Binding IndianCases.TotalCases}" Margin="0,0,15,0" TextColor="Black" BackgroundColor="White" HorizontalOptions="EndAndExpand" VerticalOptions="Center" Grid.Row="1" Grid.Column="2"/>
+                    <StackLayout Grid.Row="2" Grid.Column="2" Orientation="Horizontal" HorizontalOptions="EndAndExpand" VerticalOptions="EndAndExpand">
+                        <Label Text="{Binding IndianCases.ActiveCases}" TextColor="Black" BackgroundColor="White" />
+                        <Label Text="{Binding IndianCases.ActiveChange, Converter={StaticResource SlopToArrowConverter}}" FontFamily="{StaticResource FontAwesomeSolid}" HorizontalOptions="Center" VerticalOptions="Center" />
+                    </StackLayout>
+                    <StackLayout Grid.Row="3" Grid.Column="2" Orientation="Horizontal" HorizontalOptions="EndAndExpand" VerticalOptions="EndAndExpand">
+                        <Label Text="{Binding IndianCases.RecoveredCases}" TextColor="Black" BackgroundColor="White" HorizontalOptions="Center" VerticalOptions="Center" Grid.Row="3" Grid.Column="2"/>
+                        <Label Text="{Binding IndianCases.RecoveredChange, Converter={StaticResource SlopToArrowConverter}}" FontFamily="{StaticResource FontAwesomeSolid}" HorizontalOptions="Center" VerticalOptions="Center" />
+                    </StackLayout>
+                    <StackLayout Grid.Row="4" Grid.Column="2" Orientation="Horizontal" HorizontalOptions="EndAndExpand" VerticalOptions="EndAndExpand">
+                        <Label Text="{Binding IndianCases.Death}" TextColor="Black" BackgroundColor="White" HorizontalOptions="Center" VerticalOptions="Center" />
+                        <Label Text="{Binding IndianCases.DeathChange, Converter={StaticResource SlopToArrowConverter}}" FontFamily="{StaticResource FontAwesomeSolid}" HorizontalOptions="Center" VerticalOptions="Center" />
+                    </StackLayout>
+                    <Label Text="{Binding SelectedStateCases.TotalCases}" TextColor="Black" BackgroundColor="White" HorizontalOptions="EndAndExpand" Margin="0,0,15,0" VerticalOptions="Center" Grid.Row="1" Grid.Column="3"/>
+
+                    <StackLayout Margin="0,0,5,0" Grid.Row="2" Grid.Column="3" Orientation="Horizontal" HorizontalOptions="EndAndExpand" VerticalOptions="EndAndExpand">
+                        <Label Text="{Binding SelectedStateCases.ActiveCases}" TextColor="Black" BackgroundColor="White" HorizontalOptions="Center" VerticalOptions="Center" Grid.Row="2" Grid.Column="3"/>
+                        <Label Text="{Binding IndianCases.ActiveChange, Converter={StaticResource SlopToArrowConverter}}" FontFamily="{StaticResource FontAwesomeSolid}" HorizontalOptions="Center" VerticalOptions="Center" />
+                    </StackLayout>
+                    <StackLayout Margin="0,0,5,0" Grid.Row="3" Grid.Column="3" Orientation="Horizontal" HorizontalOptions="EndAndExpand" VerticalOptions="EndAndExpand">
+                        <Label Text="{Binding SelectedStateCases.RecoveredCases}" TextColor="Black" BackgroundColor="White" HorizontalOptions="Center" VerticalOptions="Center" Grid.Row="3" Grid.Column="3"/>
+                        <Label Text="{Binding IndianCases.RecoveredChange, Converter={StaticResource SlopToArrowConverter}}" FontFamily="{StaticResource FontAwesomeSolid}" HorizontalOptions="Center" VerticalOptions="Center" />
+                    </StackLayout>
+                    <StackLayout Margin="0,0,5,0" Grid.Row="4" Grid.Column="3" Orientation="Horizontal" HorizontalOptions="EndAndExpand" VerticalOptions="EndAndExpand">
+                        <Label Text="{Binding SelectedStateCases.Death}" TextColor="Black" BackgroundColor="White" HorizontalOptions="Center" VerticalOptions="Center" Grid.Row="4" Grid.Column="3"/>
+                        <Label Text="{Binding IndianCases.DeathChange, Converter={StaticResource SlopToArrowConverter}}" FontFamily="{StaticResource FontAwesomeSolid}" HorizontalOptions="Center" VerticalOptions="Center" />
+                    </StackLayout>
+                </Grid>
+                <BoxView BackgroundColor="Gray" HeightRequest="2" HorizontalOptions="FillAndExpand" Grid.Row="3"></BoxView>
+                <Button BackgroundColor="#2196F3" HeightRequest="40" Command="{Binding HealthFeelCmd}" CornerRadius="5" Margin="5" TextColor="White" Text="General public advice" Grid.Row="4"/>
+            </Grid>
+            <views:HealthStateView BackgroundColor="#C0808080" IsVisible="{Binding IsHealthVisible}" AbsoluteLayout.LayoutBounds="0, 0, 1, 1" AbsoluteLayout.LayoutFlags="All"></views:HealthStateView>
+            <views:CleanboardView BackgroundColor="#C0808080" BindingContext="{Binding CleanboardViewModel}" IsVisible="{Binding IsVisible}" AbsoluteLayout.LayoutBounds="0, 0, 1, 1" AbsoluteLayout.LayoutFlags="All"/>
+            <ContentView IsVisible="{Binding IsBusy}" BackgroundColor="#C0808080" AbsoluteLayout.LayoutBounds="0, 0, 1, 1" AbsoluteLayout.LayoutFlags="All">
+                <Grid HorizontalOptions="CenterAndExpand"  VerticalOptions="CenterAndExpand" >
+                    <ActivityIndicator  IsRunning="true" Color="#0288D1" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" />
+                </Grid>
+            </ContentView>
+        </AbsoluteLayout>
+    </ContentPage>
+
+
+    <ContentPage Title="Symptoms" Padding="10">
+
+        <Grid RowSpacing="5" ColumnSpacing="5" BackgroundColor="White">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <StackLayout Grid.Row="0"  
+                   Grid.Column="0">
+                <Image Source="temp"    
+                 BackgroundColor="White"  
+                 HorizontalOptions="FillAndExpand"  
+                 VerticalOptions="FillAndExpand"/>
+
+                <Label Text="High Fever" TextColor="Red" FontSize="Medium" HorizontalTextAlignment="Center"/>
+
+
+            </StackLayout>
+
+
+            <StackLayout Grid.Row="0"  
+                   Grid.Column="1">
+                <Image Source="throat"    
+                 BackgroundColor="White"  
+                 HorizontalOptions="FillAndExpand"  
+                 VerticalOptions="FillAndExpand"/>
+
+                <Label Text="Cough" TextColor="Red" FontSize="Medium" HorizontalTextAlignment="Center" />
+
+
+            </StackLayout>
+
+            <StackLayout Grid.Row="1"  
+                   Grid.Column="0">
+                <Image Source="fatigue"    
+                 BackgroundColor="White"  
+                 HorizontalOptions="FillAndExpand"  
+                 VerticalOptions="FillAndExpand"/>
+
+                <Label Text="Tiredness" TextColor="Red" FontSize="Medium" HorizontalTextAlignment="Center"/>
+
+
+            </StackLayout>
+
+            <StackLayout Grid.Row="1"  
+                   Grid.Column="1">
+                <Image Source="breathing"    
+                 BackgroundColor="White"  
+                 HorizontalOptions="FillAndExpand"  
+                 VerticalOptions="FillAndExpand"/>
+                <Label Text="Breathing Difficulty(severe cases)" TextColor="Red" FontSize="Medium" HorizontalTextAlignment="Center" />
+
+
+            </StackLayout>
+
+
+        </Grid>
+    </ContentPage>
+
+
+    <ContentPage Title="Prevention" Padding="10">
+
+
+        <Grid RowSpacing="5" ColumnSpacing="5" BackgroundColor="White" >
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <StackLayout Grid.Row="0"  
+                   Grid.Column="0">
+                <Image Source="wash"    
+                 BackgroundColor="White"  
+                 HorizontalOptions="FillAndExpand"  
+                 VerticalOptions="FillAndExpand"/>
+
+                <Label Text="Wash Hands Often!" TextColor="Red" FontSize="Medium" HorizontalTextAlignment="Center" />
+
+
+            </StackLayout>
+
+
+            <StackLayout Grid.Row="0"  
+                   Grid.Column="1">
+                <Image Source="stayhome"    
+                 BackgroundColor="White"  
+                 HorizontalOptions="FillAndExpand"  
+                 VerticalOptions="FillAndExpand"/>
+
+                <Label Text="Stay at home!" TextColor="Red" FontSize="Medium" HorizontalTextAlignment="Center" />
+
+
+            </StackLayout>
+
+            <StackLayout Grid.Row="1"  
+                   Grid.Column="0">
+                <Image Source="distance"    
+                 BackgroundColor="White"  
+                 HorizontalOptions="FillAndExpand"  
+                 VerticalOptions="FillAndExpand"/>
+
+                <Label Text="Keep safe distance!" TextColor="Red" FontSize="Medium" HorizontalTextAlignment="Center" />
+
+
+            </StackLayout>
+
+            <StackLayout Grid.Row="1"  
+                   Grid.Column="1">
+                <Image Source="mask"    
+                 BackgroundColor="White"  
+                 HorizontalOptions="FillAndExpand"  
+                 VerticalOptions="FillAndExpand"/>
+                <Label Text="Wear mask!" TextColor="Red" FontSize="Medium" HorizontalTextAlignment="Center" />
+
+
+            </StackLayout>
+
+
+        </Grid>
+
+    </ContentPage>
+
+
+</TabbedPage>

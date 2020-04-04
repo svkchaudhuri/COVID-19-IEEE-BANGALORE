@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Application xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="IEEE_COVID19.App">
+
+  <Application.Resources>
+    <ResourceDictionary>
+      <OnPlatform x:TypeArguments="x:String"
+            x:Key="FontAwesomeBrands">
+        <On Platform="Android"
+    Value="FontAwesome5Brands.otf#Regular" />
+        <On Platform="iOS"
+    Value="FontAwesome5Brands-Regular" />
+        <On Platform="UWP"
+    Value="/Assets/FontAwesome5Brands.otf#Font Awesome 5 Brands" />
+      </OnPlatform>
+
+      <OnPlatform x:TypeArguments="x:String"
+            x:Key="FontAwesomeSolid">
+        <On Platform="Android"
+    Value="FontAwesome5Solid.otf#Regular" />
+        <On Platform="iOS"
+    Value="FontAwesome5Free-Solid" />
+        <On Platform="UWP"
+    Value="/Assets/FontAwesome5Solid.otf#Font Awesome 5 Free" />
+      </OnPlatform>
+
+      <OnPlatform x:TypeArguments="x:String"
+            x:Key="FontAwesomeRegular">
+        <On Platform="Android"
+    Value="FontAwesome5Regular.otf#Regular" />
+        <On Platform="iOS"
+    Value="FontAwesome5Free-Regular" />
+        <On Platform="UWP"
+    Value="/Assets/FontAwesome5Regular.otf#Font Awesome 5 Free" />
+      </OnPlatform>
+      <Style TargetType="Button">
+        <Setter Property="BackgroundColor" Value="#0288D1"/>
+        <Setter Property="TextColor" Value="White"/>
+      </Style>
+    </ResourceDictionary>
+  </Application.Resources>
+
+</Application>

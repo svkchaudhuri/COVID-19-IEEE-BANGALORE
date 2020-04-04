@@ -1,0 +1,66 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:base="clr-namespace:IEEE_COVID19.ViewModels.Base;assembly=IEEE_COVID19"
+             mc:Ignorable="d"
+             Title="Guidance"
+             x:Class="IEEE_COVID19.Views.GuidanceView"
+             base:ViewModelLocator.AutoWireViewModel="True">
+    <ContentPage.Content>
+        <ScrollView>
+         <StackLayout Padding="10">
+            <Label Text="Basic protective measures against the new coronavirus"
+                VerticalOptions="Center" FontAttributes="Bold" FontSize="Title"
+                HorizontalOptions="Center" />
+            <Label Text="Stay aware of the latest information on the COVID-19 outbreak, available on the WHO website and through your national and local public health authority. Most people who become infected experience mild illness and recover, but it can be more severe for others. Take care of your health and protect others by doing the following:
+                   " FontSize="Large" HorizontalOptions="Fill" />
+            <Image Source="be_smart_inform.jpg" HorizontalOptions="Center"/>
+            <Label Text="Wash your hands frequently"
+                   FontSize="Title" HorizontalOptions="Center" FontAttributes="Bold" />
+            <Label Text="Regularly and Throughly clean your hands with an alcohol-based hand rub or wash them with soap and water."
+                   FontSize="Large" HorizontalOptions="Fill"/>
+            <Label Text="Washing your hands with soap and water or using alcohol-based hand rub kills viruses that may be on your hands."
+                   FontSize="Large"
+                   HorizontalOptions="Fill" />
+            <Label Text="Washing your hands with soap and water or using alcohol-based hand rub kills viruses that may be on your hands."
+                   FontSize="Large" HorizontalOptions="Fill" />
+            <Image Source="handwashtime.png" HorizontalOptions="Center"/>
+            <Label Text="Maintain social distancing"
+                   FontSize="Title" HorizontalOptions="Center" FontAttributes="Bold"/>
+            <Label Text="Maintain at least 1 metre (3 feet) distance between yourself and anyone who is coughing or sneezing."
+                   FontSize="Large" HorizontalOptions="Fill"/>
+            <Label Text="When someone coughs or sneezes they spray small liquid droplets from their nose or mouth which may contain virus. If you are too close, you can breathe in the droplets, including the COVID-19 virus if the person coughing has the disease."
+                   FontSize="Large" HorizontalOptions="Fill"/>
+            <Image Source="safe_greetings.png" HorizontalOptions="Center" />
+            <Label Text="Avoid touching eyes, nose and mouth"
+                   FontSize="Title" HorizontalOptions="Center" FontAttributes="Bold"/>
+            <Label Text="Hands touch many surfaces and can pick up viruses. Once contaminated, hands can transfer the virus to your eyes, nose or mouth. From there, the virus can enter your body and can make you sick."
+                   FontSize="Large" HorizontalOptions="Fill"/>
+            <Image Source="wearing_gloves.png" HorizontalOptions="Center"/>
+            <Label Text="Practice respiratory hygiene"
+                   FontSize="Title" HorizontalOptions="Center" FontAttributes="Bold"/>
+            <Label Text="Make sure you, and the people around you, follow good respiratory hygiene. This means covering your mouth and nose with your bent elbow or tissue when you cough or sneeze. Then dispose of the used tissue immediately."
+                   FontSize="Large" HorizontalOptions="Fill"/>
+            <Label Text="Droplets spread virus. By following good respiratory hygiene you protect the people around you from viruses such as cold, flu and COVID-19."
+                   FontSize="Large" HorizontalOptions="Fill"/>
+            <Image Source="coughing.png" HorizontalOptions="Center"/>
+            <Label Text="If you have fever, cough and difficulty breathing, seek medical care early"
+                   FontSize="Title" HorizontalOptions="Center" FontAttributes="Bold"/>
+            <Label Text="Stay home if you feel unwell. If you have a fever, cough and difficulty breathing, seek medical attention and call in advance. Follow the directions of your local health authority."
+                   FontSize="Large" HorizontalOptions="Fill"/>
+            <Image Source="medicalcare.png" HorizontalOptions="Center"/>
+            <Label Text="National and local authorities will have the most up to date information on the situation in your area. Calling in advance will allow your health care provider to quickly direct you to the right health facility. This will also protect you and help prevent spread of viruses and other infections."
+                   FontSize="Large" HorizontalOptions="Fill"/>
+            <Label Text="Stay informed and follow advice given by your healthcare provider"
+                   FontSize="Title" HorizontalOptions="Center" FontAttributes="Bold"/>
+            <Label Text="Stay informed on the latest developments about COVID-19. Follow advice given by your healthcare provider, your national and local public health authority or your employer on how to protect yourself and others from COVID-19."
+                   FontSize="Large" HorizontalOptions="Fill"/>
+            <Label Text="National and local authorities will have the most up to date information on whether COVID-19 is spreading in your area. They are best placed to advise on what people in your area should be doing to protect themselves."
+                   FontSize="Large" HorizontalOptions="Fill"/>
+            <Image Source="be_safe.jpg" HorizontalOptions="Center"/>      
+        </StackLayout>
+     </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

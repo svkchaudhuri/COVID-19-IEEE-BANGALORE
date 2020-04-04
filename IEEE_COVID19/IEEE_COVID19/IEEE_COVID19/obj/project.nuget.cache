@@ -1,0 +1,21 @@
+{
+  "version": 2,
+  "dgSpecHash": "ApzHEpm4W1Yy4pLwiSpLCm1+f4s9kzJJRI9SlLy1D/JRrprqAfSSjaoKUTzRAmq87S21jKtxS+1fHxNvmqnE5g==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\thoug\\Downloads\\IEEE_COVID19_WithNotification\\IEEE_COVID19\\IEEE_COVID19\\IEEE_COVID19\\IEEE_COVID19.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\thoug\\.nuget\\packages\\autofac\\5.1.2\\autofac.5.1.2.nupkg.sha512",
+    "C:\\Users\\thoug\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\1.1.0\\microsoft.bcl.asyncinterfaces.1.1.0.nupkg.sha512",
+    "C:\\Users\\thoug\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
+    "C:\\Users\\thoug\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512",
+    "C:\\Users\\thoug\\.nuget\\packages\\newtonsoft.json\\12.0.3\\newtonsoft.json.12.0.3.nupkg.sha512",
+    "C:\\Users\\thoug\\.nuget\\packages\\system.numerics.vectors\\4.5.0\\system.numerics.vectors.4.5.0.nupkg.sha512",
+    "C:\\Users\\thoug\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\4.5.2\\system.runtime.compilerservices.unsafe.4.5.2.nupkg.sha512",
+    "C:\\Users\\thoug\\.nuget\\packages\\system.threading.tasks.extensions\\4.5.2\\system.threading.tasks.extensions.4.5.2.nupkg.sha512",
+    "C:\\Users\\thoug\\.nuget\\packages\\xam.plugin.connectivity\\4.0.0.190-beta\\xam.plugin.connectivity.4.0.0.190-beta.nupkg.sha512",
+    "C:\\Users\\thoug\\.nuget\\packages\\xam.plugins.messaging\\5.2.0\\xam.plugins.messaging.5.2.0.nupkg.sha512",
+    "C:\\Users\\thoug\\.nuget\\packages\\xamarin.essentials\\1.5.2\\xamarin.essentials.1.5.2.nupkg.sha512",
+    "C:\\Users\\thoug\\.nuget\\packages\\xamarin.forms\\4.1.0.581479\\xamarin.forms.4.1.0.581479.nupkg.sha512"
+  ],
+  "logs": []
+}
