@@ -8,7 +8,7 @@ The app includes the following features (in brief)
 3) Users can schedule their own notifications(washing hands..etc) through settings page.They can also add emergency contact numbers themselves.If left blank the default is set to National Covid-19 Helpline
 4) Donate page has been added through which users will be able to find National and Statewise account details.
 5) Interactive scoring mechanism is added which will rate them based on the tasks they complete.
-6) Covid Visializer has been added.
+6) Covid Visualizer has been added.
 7) Symptom Checker by Apollo Hospitals has been added.
 8) A Notice page has been added to inform users of any guidline updated.The page is hosted on github.
 9) Some static pages scraped from WHO websites has been added (eg Work from home hacks)
