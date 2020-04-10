@@ -12,7 +12,7 @@ using IEEE_COVID19.Notification;
 
 namespace IEEE_COVID19.Droid
 {//MainLauncher = true,
-    [Activity(Label = "CovCov", Icon = "@drawable/covocov_ARITRA.png", Theme = "@style/MainTheme",  ConfigurationChanges = ConfigChanges.ScreenSize | ConfigChanges.Orientation)]
+    [Activity(Label = "CovCov", Theme = "@style/MainTheme",  ConfigurationChanges = ConfigChanges.ScreenSize | ConfigChanges.Orientation)]
     public class MainActivity : global::Xamarin.Forms.Platform.Android.FormsAppCompatActivity
     {
         protected override void OnCreate(Bundle savedInstanceState)
