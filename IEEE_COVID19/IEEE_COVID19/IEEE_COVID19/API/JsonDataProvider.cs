@@ -59,17 +59,20 @@ namespace IEEE_COVID19.API
                 
                 stateCases.statewise.ForEach(x =>
                 {
+                    if(x!=null)
+                    {
                     var state = new StateCases()
                     {
                         ActiveCases = x.active,
                         Death = x.deaths,
                         RecoveredCases = x.recovered,
-                        ActiveChange = SetIndividualState(x.delta.active),
-                        RecoveredChange = SetIndividualState(x.delta.recovered),
-                        DeathChange = SetIndividualState(x.delta.deaths),
+                        ActiveChange = SetIndividualState(x.delta!=null? x.delta.active:0),
+                        RecoveredChange = SetIndividualState(x.delta!=null? x.delta.recovered:0),
+                        DeathChange = SetIndividualState(x.delta!=null? x.delta.deaths:0),
                         State = x.state
                     };
                     allStateData.Add(state);
+                    }
                 });
                 var total = allStateData.FirstOrDefault(x =>
                     x.State.Equals("Total", StringComparison.InvariantCultureIgnoreCase));
